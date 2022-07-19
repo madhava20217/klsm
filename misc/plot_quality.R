@@ -3,6 +3,8 @@ library(ggplot2)
 library(plyr)
 library(scales)
 
+
+
 pqplot <- function(infile, outfile) {
     # install.packages(c("Rmisc", "ggplot2", "plyr"))
 
@@ -34,8 +36,8 @@ pqplot <- function(infile, outfile) {
 
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
-    infile <- file("stdin")
-    outfile <- "stdin.png"
+    infile <- "../results.csv"     # modified here
+    outfile <- "../quality.png"
 } else if (length(args) == 1) {
     infile <- args[1]
     outfile <- paste(basename(args[1]), ".png", sep = "")

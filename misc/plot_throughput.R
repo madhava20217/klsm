@@ -46,8 +46,8 @@ pqplot <- function(infile, outfile) {
 
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) == 0) {
-    infile <- file("stdin")
-    outfile <- "stdin.png"
+    infile <- "../results.csv"     # modified here
+    outfile <- "../throughput.png"
 } else if (length(args) == 1) {
     infile <- args[1]
     outfile <- paste(basename(args[1]), ".png", sep = "")
